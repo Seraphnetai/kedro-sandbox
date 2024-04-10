@@ -1,0 +1,29 @@
+bucket_name: "my_s3_bucket"
+key_prefix: "my/key/prefix/"
+
+date: 2022-09-20
+
+datasets:
+    js_json: "json.JSONDataSet"
+    pd_csv: "pandas.CSVDataSet"
+    pd_excel: "pandas.ExcelDataSet"
+    pd_gbqdata: "pandas.GBQQueryDataSet"
+    pd_gbqtable: "pandas.GBQTableDataSet"
+    pd_json: "pandas.JSONDataSet"
+    pd_parquet: "pandas.ParquetDataSet"
+    pd_sqlquery: "pandas.SQLQueryDataSet"
+    pd_sqltable: "pandas.SQLTableDataSet"
+    pkl_dataset: "pickle.PickleDataSet"
+    pl_dataset: "plotly.PlotlyDataSet"
+    sp_dataset: "spark.SparkDataSet"
+    sp_hive: "spark.SparkHiveDataSet"
+
+folders:
+    raw: "01_raw"
+    intermediate: "02_intermediate"
+    primary: "03_primary"
+    feature: "04_feature"
+    model_input: "05_model_input"
+    models: "06_models"
+    model_output: "07_model_output"
+    reporting: "08_reporting"

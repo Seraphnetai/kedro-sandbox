@@ -1,0 +1,59 @@
+[tool.kedro]
+package_name = "kedro_sandbox_proj"
+project_name = "kedro_sandbox_proj"
+project_version = "0.18.2"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+known_third_party = "kedro"
+
+[tool.pytest.ini_options]
+addopts = """
+--cov-report term-missing \
+--cov src/kedro_sandbox_proj -ra"""
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
+
+[tool.poetry]
+name = "proj"
+version = "0.1.0"
+description = ""
+authors = ["SeraphnetAI"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.9"
+isort = "5.0"
+kedro = "0.18.1"
+kedro-telemetry = "0.2.0"
+kedro-docker = "^0.3.0"
+pytest-cov = "3.0"
+pytest-mock = "2.0"
+Jinja2 = "3.1.0"
+pandas = "^1.4.3"
+numpy = ">=1.21.0,<1.23"
+requests = "2.25.1"
+pyarrow = "^6.0.1"
+jupyter = "^1.0.0"
+jupyterlab = "^3.4.6"
+nbstripout = "^0.6.0"
+jupytext = "^1.14.1"
+scikit-learn = "^1.1.2" 
+xgboost = "^1.6.2"
+lightgbm = "^3.3.2"
+catboost = "^1.0.6"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
